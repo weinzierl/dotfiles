@@ -35,6 +35,10 @@ set completeopt=menu,longest,preview "insert mode completion options
 
 set nowrap     "don't wrap long lines per default
 
+let mapleader=","
+
+set wildmenu
+set wildmode=list:longest,full
 
 "Load pathogen
 execute pathogen#infect()
@@ -54,7 +58,7 @@ filetype plugin indent on "automatically load plugins and indentation
 
 "Use jj instead of Esc and produce an error when Esc is pressed
 inoremap jj <Esc>
-inoremap <Esc> Use jj for Esc!
+"inoremap <Esc> Use jj for Esc!   "Doesn't work with supertab
 
 "Undo and History
 if v:version >= 730
