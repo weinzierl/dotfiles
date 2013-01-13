@@ -1,0 +1,93 @@
+# Ludwig Weinzierl, 2013
+#
+# Wish List
+#   Check whitespace in git add 
+#   Error when encoding of commit message not UTF-8 (or even ASCII)
+# Both is only possible with hooks at the moment.
+
+[user]
+  name = Ludwig Weinzierl
+  email = noreply@weinzierlweb.com
+
+[color]
+  ui = true
+  interactive = auto
+
+[core]
+  # I found paged output annoying.
+  # If direct output has disadvantages, change back to pager = less -FR
+  pager = cat
+
+  # This is important!
+  # EOL conversion is handled by the following settings
+  # (first value in the list is the default value)
+  # core.autocrlf  false, true, input
+  # core.safecrlf  false, true, warn
+  # core.eol       native, lf, crlf
+  # Best explanation I found so far:
+  # http://timclem.wordpress.com/2012/03/01/mind-the-end-of-your-line/
+
+  # I prefer a config where git would never do automatic conversion 
+  # but refuses files with CRLF, so I can convert them myself.
+  # With autocrlf = input git will convert CRLF on the way to the
+  # repo and will do nothing on the way out of the repo. 
+  # safecrlf = true throws an error when conversion would not be 
+  # reversible. The combination of both will throw an error on every
+  # file that contains CRLF.
+
+  # Github also recommends core.autocrlf = input
+  # https://help.github.com/articles/dealing-with-line-endings
+
+  autocrlf = input  # input = convert to lf when writing in repo, 
+                    # don't convert when writing in working copy
+  # core.autocrlf = input doesn't play well with git-svn however,
+  # so for git-svn repos set it to false.
+  #autocrlf = false
+
+  safecrlf = true # Should be enabled, no matter how autocrlf is set
+                  # Behavior depends on autocrlf setting, with 
+                  # autocrlf = input git add throws an error on 
+                  # every file with CRLF
+                  # With autocrlf = false this setting doesn't matter
+
+  # Be strict about whitespace and prefer spaces over tabs.
+  # This setting does not apply to git add, because git add does not 
+  # whitespace checking.
+  # Default values are pretty strict already, just forbid tabs in indent
+  # and set shallow tab width.
+  whitespace = tab-in-indent, tabwidth = 2
+	
+  # When core.autocrlf = false (see above), whitespace handling needs to
+  # be told about possible CRLFs.
+  #whitespace = cr-at-eol, tab-in-indent, tabwidth = 2
+
+  excludesfile = ~/.gitignore
+
+[alias]
+  rank = shortlog -sn --no-merges
+
+  # The following two are from
+  # http://www.jukie.net/~bart/blog/pimping-out-git-log
+  lg = !git log --graph --pretty=lg --abbrev-commit --date=relative
+  lgn = !git log --graph --pretty=lgn --abbrev-commit --date=relative
+
+  svnrevert = reset --hard HEAD #Revert whole tree,  SVN style
+
+  #From http://git.661346.n2.nabble.com/whitespace-checking-in-git-add-td2361846.html
+  fixwhitespace = rebase --whitespace=fix HEAD~
+
+  unstage = reset HEAD
+
+  addall = add -A
+
+[diff]
+  tool = gvimdiff
+
+[web]
+  browswer = firefox
+
+[pretty]
+  # I don't remember where the following two are from
+  lg = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset
+  lgn = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) \
+                %C(bold blue)<%an>%Creset

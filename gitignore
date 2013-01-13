@@ -1,0 +1,58 @@
+# Ludwig Weinzierl, 2013
+# Originally I only added the ones that I personally encountered
+# and that are not project specific.
+#
+# A good overview of sensible global ignores is
+# https://help.github.com/articles/ignoring-files
+# I added a few from there that seemed to make sense.
+
+# Ignore all dot files and directories, except...
+# The other sections rely on the fact that dot
+# file are generally ignored.
+.*
+# From my tests: .gitignore et al. are no treated specially by git,
+# so they have to be excluded from the .* ignore
+!.gitignore
+!.gitmodules
+!.gitattributes
+
+# Generic
+*~
+*.bak
+*.BAK
+*.log
+*.LOG
+*.tmp
+*.TMP
+
+*.[oa]
+*.class
+
+# Vim
+*.sw[a-z]
+Session.vim
+TAGS
+!TAGS/
+tags
+!tags/
+
+# OSX
+Icon
+Icon?
+Spotlight-V100
+
+# Windows
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Eclipse
+bin/
+build/
+tmp/
+local.properties
+*.launch
+
+
+
