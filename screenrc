@@ -1,0 +1,4 @@
+# Ludwig Weinzierl, 2013
+startup_message off
+termcapinfo xterm ti@:te@
+defscrollback 100000
