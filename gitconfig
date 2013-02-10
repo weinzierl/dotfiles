@@ -18,6 +18,11 @@
   # If direct output has disadvantages, change back to pager = less -FR
   pager = cat
 
+  # -f is necessary, because gvim will otherwise fork and return
+  # immediately which causes the error
+  # "Aborting commit due to empty commit message."
+  editor = gvim -f
+
   # This is important!
   # EOL conversion is handled by the following settings
   # (first value in the list is the default value)
