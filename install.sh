@@ -28,4 +28,9 @@ rm -i $HOME/.grafx2/gfx2.ini
 rmdir $HOME/.grafx2
 ln -s $HOME/.dotfiles/grafx2 $HOME/.grafx2
 
+# Finger
+rm -i $HOME/.plan
+ln -s $HOME/.dotfiles/plan $HOME/.plan
+rm -i $HOME/.project
+ln -s $HOME/.dotfiles/project $HOME/.project
 
