@@ -22,3 +22,10 @@ ln -s $HOME/.dotfiles/screenrc $HOME/.screenrc
 rm -i $HOME/.hushlogin
 ln -s $HOME/.dotfiles/hushlogin $HOME/.hushlogin
 
+# GrafX2
+rm -i $HOME/.grafx2/gfx2.cfg
+rm -i $HOME/.grafx2/gfx2.ini
+rmdir $HOME/.grafx2
+ln -s $HOME/.dotfiles/grafx2 $HOME/.grafx2
+
+
