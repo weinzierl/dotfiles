@@ -106,6 +106,7 @@ endif                                     "textwidth
 
 "Load color scheme
 colorscheme solarized
+set background=light
 
 "Folding
 function! FoldHierarchicalNumbering(linenum)
@@ -300,7 +301,7 @@ set statusline+=\             "for consistency with the last line ruler
 
 "set textwidth=72  "was to annoying for website editing
 
-"set background=light
+
 
 "Based on similar expression from :help fold-expr
 "set foldexpr=getline(v:lnum)=~'^\\s*\\*\\*\ .\\+\ \\*\\*$'&&getline(v:lnum+1)=~'^\\s*$'?'>1':1
