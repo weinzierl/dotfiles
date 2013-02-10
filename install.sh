@@ -1,4 +1,4 @@
-# Copyright L. Weinzierl 2013
+# L. Weinzierl 2013
 # CAREFUL this file removes configuration files.
 # Only run this if you know what you are doing.
 rm -ri $HOME/.vim
