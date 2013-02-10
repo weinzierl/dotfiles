@@ -37,6 +37,6 @@ rm -i $HOME/.forward
 ln -s $HOME/.dotfiles/forward $HOME/.forward
 
 # MDA
-rm -i $HOME/.procmail
-ln -s $HOME/.dotfiles/procmail $HOME/.procmail
+rm -i $HOME/.procmailrc
+ln -s $HOME/.dotfiles/procmailrc $HOME/.procmailrc
 
