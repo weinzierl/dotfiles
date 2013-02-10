@@ -1,0 +1,6 @@
+# Ludwig Weinzierl, 2013
+
+# Ensure that mail is never delivered locally
+
+:0
+/dev/null

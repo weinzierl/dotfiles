@@ -1,0 +1,33 @@
+# Ludwig Weinzierl, 2013
+
+# Syntax to pipe the message to a command differs.
+# If one of the pipe commands below doesn't work
+# try one of the following alternatives:
+#
+# |/full/path/to/cmd
+# |"/full/path/to/cmd args"
+# "|/full/path/to/cmd args"
+
+# Prevent local delivery
+########################
+
+# Ensure that mail is never delivered locally
+/dev/null
+
+# Alternative syntax if local file delivery is restricted 
+# (SafeFileEnvironment in Sendmail), but piping messages is allowed
+# (F=| flag in Sendmail)
+#|"cat /dev/null"
+
+# Process with procmail
+#######################
+
+#|"exec /usr/bin/procmail"
+# Exim needs another syntax
+#|/usr/bin/procmail
+
+# Really forward
+################
+
+# Just an example, replace with real address
+#noreply@weinzierlweb.com

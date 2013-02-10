@@ -32,3 +32,11 @@ ln -s $HOME/.dotfiles/plan $HOME/.plan
 rm -i $HOME/.project
 ln -s $HOME/.dotfiles/project $HOME/.project
 
+# MTA
+rm -i $HOME/.forward
+ln -s $HOME/.dotfiles/forward $HOME/.forward
+
+# MDA
+rm -i $HOME/.procmail
+ln -s $HOME/.dotfiles/procmail $HOME/.procmail
+
