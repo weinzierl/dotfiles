@@ -1,0 +1,33 @@
+# Ludwig Weinzierl, 2013
+
+00 00 00 black
+d4 6b 6e red
+0a aa 7b green
+f0 d2 60 yellow
+49 9c d1 blue
+90 90 90 medium
+ea ea ea clear
+ff ff ff white
+
+font.family: DejaVu Sans
+font.size: 10
+font.sizes: 6, 7, 8, 9, 10, 11, 12
+
+font.monospace: DejaVu Sans Mono
+font.antialias: true
+font.hinting: true
+
+# Font stacks inspired by 
+# http://www.grputland.com/2012/09/three-font-stacks-to-match-dejavu.html
+
+font.css: "DejaVu LGC Sans", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Geneva, sans-serif
+font:cssmonospace: "DejaVu LGC Sans Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Menlo, "Lucida Console", "Andale Mono", "Liberation Mono", Monaco, monospace
+
+# msys rxvt can't cope with fonts containing double width characters
+# so it gets a font with only single width characters
+font.msysrxvt: DejaVu LGC Sans Mono
+
+linewidth.default: 0.25 mm
+linewidth.strong: 0.5 mm
+linewidth.extra: 0.7 mm
+linewidth.special: 0.35 mm
