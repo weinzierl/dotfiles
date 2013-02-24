@@ -1,0 +1,13 @@
+GIMP Palette
+Name: colorized
+Columns: 8
+# Ludwig Weinzierl, 2013
+0 0 0	black
+212 107 110	red
+10 170 123	green
+240 210 96	yellow
+73 156 209	blue
+144 144 144	medium
+234 234 234	clear
+255 255 255	white
+

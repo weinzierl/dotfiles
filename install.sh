@@ -40,3 +40,5 @@ ln -s $HOME/.dotfiles/forward $HOME/.forward
 rm -i $HOME/.procmailrc
 ln -s $HOME/.dotfiles/procmailrc $HOME/.procmailrc
 
+# Inkscape
+ln -s $HOME/.dotfiles/colorized.gpl $HOME/.config/inkscape/palettes
